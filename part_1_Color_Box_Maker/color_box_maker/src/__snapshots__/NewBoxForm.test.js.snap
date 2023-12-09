@@ -3,15 +3,22 @@
 exports[`NewBoxForm snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="NewBoxForm"
+    class="NewBoxForm-container"
   >
-    <h2>
+    <h2
+      class="NewBoxForm-title"
+    >
       New Box Form
     </h2>
-    <form>
-      <label>
-        width:
+    <form
+      class="NewBoxForm"
+    >
+      <label
+        class="NewBoxForm-label"
+      >
+        Width:
         <input
+          class="NewBoxForm-input"
           name="width"
           required=""
           type="text"
@@ -19,9 +26,12 @@ exports[`NewBoxForm snapshot 1`] = `
         />
       </label>
       <br />
-      <label>
-        height:
+      <label
+        class="NewBoxForm-label"
+      >
+        Height:
         <input
+          class="NewBoxForm-input"
           name="height"
           required=""
           type="text"
@@ -29,9 +39,12 @@ exports[`NewBoxForm snapshot 1`] = `
         />
       </label>
       <br />
-      <label>
-        backgroundColor:
+      <label
+        class="NewBoxForm-label"
+      >
+        Background Color:
         <input
+          class="NewBoxForm-input"
           name="backgroundColor"
           required=""
           type="text"
@@ -40,6 +53,7 @@ exports[`NewBoxForm snapshot 1`] = `
       </label>
       <br />
       <button
+        class="NewBoxForm-btn"
         type="submit"
       >
         Add New Box!

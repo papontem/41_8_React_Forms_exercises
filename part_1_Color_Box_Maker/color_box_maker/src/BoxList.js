@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./NewBoxForm.css";
 import NewBoxForm from "./NewBoxForm";
-import "./Box.css";
+import "./Box.css"; 
 import Box from "./Box";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
 /*
 Manages the state for all boxes.
@@ -12,19 +12,26 @@ Renders the NewBoxForm component.
 */
 function Boxlist(props) {
 	const [boxes, setBoxes] = useState([]);
-	console.log(boxes);
-	{/* map iteration of current boxes being displayed */}
+	
+	// Function to delete a box by ID
+	const deleteBox = (boxId) => {
+		setBoxes((prevBoxes) => prevBoxes.filter((box) => box.id !== boxId));
+	};
+	
+	// map iteration of current boxes being displayed 
 	const renderBoxes = () => {
 		return (
-			<ul>
+			<ul className="Boxlist-list">
 				{boxes.map((box) => (
-					<Box key={box.id}
-						width = {box.width} 
-						height = {box.height}
-						backgroundColor = {box.backgroundColor}
-						>
-
-						</Box>
+					<li>
+						<Box
+						key={box.id}
+						width={box.width}
+						height={box.height}
+						backgroundColor={box.backgroundColor}
+						deleteBox={() => deleteBox(box.id)}
+						></Box>
+					</li>
 				))}
 			</ul>
 		);
@@ -38,9 +45,11 @@ function Boxlist(props) {
 	};
 	// end addItem
 
+	
+
 	return (
 		<div className="Boxlist">
-			<NewBoxForm addBox={addBox}/>
+			<NewBoxForm addBox={addBox} />
 			<hr />
 			{renderBoxes()}
 			{/* This following boxes are just for testing */}

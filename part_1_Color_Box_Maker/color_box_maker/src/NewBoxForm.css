@@ -1,3 +1,33 @@
-* {
+/* NewBoxForm.css */
+
+.NewBoxForm-container {
     margin: 5px;
+}
+
+.NewBoxForm-title{
+    font-size:calc(10px + 1vmin);
+}
+.NewBoxForm {
+    /* Add additional styling for the form if needed */
+}
+
+.NewBoxForm-label {
+    margin: 5px;
+}
+
+.NewBoxForm-input {
+    margin: 5px;
+}
+
+.NewBoxForm-btn {
+    margin: 5px;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.NewBoxForm-btn:hover {
+    background-color: #0056b3;
 }
