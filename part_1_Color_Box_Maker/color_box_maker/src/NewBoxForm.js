@@ -3,7 +3,7 @@ import React, { useState } from "react";
     Renders a form that allows users to specify the width, height, and background color for a new box.
     When the form is submitted, it creates a new box with the specified properties and clears the input values.
 */
-function NewBoxForm(params) {
+function NewBoxForm({addBox}) {
 	// State for form data
 	// width, height, and background color for a new box.
 	const [newBoxFormData, setNewBoxFormData] = useState({
@@ -24,8 +24,18 @@ function NewBoxForm(params) {
 	// Event handler for form submission
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		// PAM: Well add more logic here, like clearing values on the form
+		
 		console.log("Form submitted:", newBoxFormData);
+		addBox(newBoxFormData);
+
+		// Clear input values after form submission
+		setNewBoxFormData({
+			width: "",
+			height: "",
+			backgroundColor: "",
+		});
+
+		// Now create the box
 	};
 
 	return (
