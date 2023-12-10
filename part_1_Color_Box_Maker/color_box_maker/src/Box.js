@@ -1,7 +1,7 @@
 /*
-Displays a div with a background color, width, and height based on the props.
-Includes a button with the text "X" next to each box.
-Utilizes a function passed down as a prop to remove the specific box when the "X" button is clicked.
+    - Displays a div with a background color, width, and height based on the props.
+    - Includes a button with the text "X" next to each box.
+    - Utilizes a function passed down as a prop to remove the specific box when the "X" button is clicked.
 */
 
 function Box(props) {

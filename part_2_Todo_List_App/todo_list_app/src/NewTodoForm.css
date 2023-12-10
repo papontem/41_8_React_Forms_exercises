@@ -1,0 +1,33 @@
+/* NewTodoForm.css */
+
+.NewTodoForm-container {
+    margin: 5px;
+}
+
+.NewTodoForm-title{
+    font-size:calc(10px + 1vmin);
+}
+.NewTodoForm {
+    /* Add additional styling for the form if needed */
+}
+
+.NewTodoForm-label {
+    margin: 5px;
+}
+
+.NewTodoForm-input {
+    margin: 5px;
+}
+
+.NewTodoForm-btn {
+    margin: 5px;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.NewTodoForm-btn:hover {
+    background-color: #0056b3;
+}

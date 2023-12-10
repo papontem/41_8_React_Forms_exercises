@@ -6,9 +6,9 @@ import Box from "./Box";
 import { v4 as uuidv4 } from "uuid";
 
 /*
-Manages the state for all boxes.
-Renders multiple instances of the Box component.
-Renders the NewBoxForm component.
+	- Manages the state for all boxes.
+	- Renders multiple instances of the Box component.
+	- Renders the NewBoxForm component.
 */
 function Boxlist(props) {
 	const [boxes, setBoxes] = useState([]);
@@ -43,7 +43,7 @@ function Boxlist(props) {
 		let newBox = { ...box, id: uuidv4() };
 		setBoxes((boxes) => [...boxes, newBox]);
 	};
-	// end addItem
+	// end addBox
 
 	
 
@@ -52,7 +52,6 @@ function Boxlist(props) {
 			<NewBoxForm addBox={addBox} />
 			<hr />
 			{renderBoxes()}
-			{/* This following boxes are just for testing */}
 		</div>
 	);
 }

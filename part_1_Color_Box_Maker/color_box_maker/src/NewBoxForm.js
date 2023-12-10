@@ -25,7 +25,7 @@ function NewBoxForm({ addBox }) {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
-		console.log("Form submitted:", newBoxFormData);
+		// console.log("Form submitted:", newBoxFormData);
 		addBox(newBoxFormData);
 
 		// Clear input values after form submission
